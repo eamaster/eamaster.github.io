@@ -55,6 +55,19 @@
         .contact-info {
             flex-grow: 1;
         }
+
+        /* Responsive fix for smaller screens */
+        @media (max-width: 600px) {
+            .contact-info-box {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .photo {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
     </style>
 </head>
 <body>
