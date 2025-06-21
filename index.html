@@ -1,71 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="description" content="Professional resume of Seyedhesamodin Mahdinejadsabet - IT Support Specialist with 6+ years of experience">
+    <meta name="keywords" content="IT Support, Technical Support, System Administrator, Network Technician, IT Professional">
+    <meta name="author" content="Seyedhesamodin Mahdinejadsabet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seyedhesamodin Mahdinejadsabet - Resume</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-gray: #f8f9fa;
+            --border-color: #e1e4e8;
+        }
+        
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            box-sizing: border-box;
         }
+        
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: #f5f7fa;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
         .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 40px;
             background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
         }
-        h1, h2, h3 {
+        
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.2em;
+            margin-bottom: 5px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.5em;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border-color);
+            font-weight: 600;
+        }
+        
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.2em;
+            margin: 20px 0 8px;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 15px;
             color: #444;
+            line-height: 1.7;
         }
+        
         a {
-            color: #0066cc;
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--accent-color);
             text-decoration: none;
         }
-        a:hover {
-            text-decoration: underline;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
+        
         ul {
-            list-style: disc;
-            padding-left: 20px;
+            list-style: none;
+            margin: 0 0 15px 0;
+            padding: 0;
         }
+        
+        ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        
+        ul li:before {
+            content: '•';
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
         .contact-info-box {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
         }
+        
         .photo {
             flex-shrink: 0;
-            margin-right: 20px;
-        }
-        .photo img {
+            margin-right: 30px;
             width: 150px;
             height: 150px;
+            border: 5px solid #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             border-radius: 50%;
+            overflow: hidden;
+            position: relative;
         }
-        .contact-info {
-            flex-grow: 1;
+        
+        .photo img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 25%;
+            display: block;
+        }
+        
+        .contact-info h2 {
+            color: var(--secondary-color);
+            font-size: 1.1em;
+            margin: 5px 0 10px;
+            padding: 0;
+            border: none;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .contact-info p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section:last-child {
+            margin-bottom: 0;
         }
 
-        /* Responsive fix for smaller screens */
-        @media (max-width: 600px) {
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                margin: 15px;
+                padding: 25px;
+            }
+            
             .contact-info-box {
                 flex-direction: column;
-                align-items: center;
                 text-align: center;
             }
+            
             .photo {
-                margin-right: 0;
-                margin-bottom: 10px;
+                margin: 0 0 20px 0;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            h2 {
+                font-size: 1.3em;
+            }
+        }
+        
+        @media print {
+            body {
+                background: #fff;
+                font-size: 12pt;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 0;
+                margin: 0;
+                max-width: 100%;
+            }
+            
+            .no-print {
+                display: none;
+            }
+            
+            a {
+                color: #000;
+                text-decoration: none;
             }
         }
     </style>
@@ -78,45 +216,50 @@
             </div>
             <div class="contact-info">
                 <h1>Seyedhesamodin Mahdinejadsabet</h1>
+                <h2>IT SUPPORT SPECIALIST</h2>
                 <p>
-                    Malaysia, Subang Jaya | +60192077905 | <a href="mailto:Hesam.time@gmail.com">Hesam.time@gmail.com</a> |
-                    <a href="https://www.linkedin.com/in/hesam-mahdinejad/" target="_blank">LinkedIn</a>
+                    <i class="fas fa-map-marker-alt"></i> Malaysia, Subang Jaya<br>
+                    <i class="fas fa-phone"></i> +60 10-366 7865<br>
+                    <i class="fas fa-envelope"></i> <a href="mailto:Hesam.time@gmail.com">Hesam.time@gmail.com</a><br>
+                    <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/hesam-mahdinejad/" target="_blank">linkedin.com/in/hesam-mahdinejad</a>
                 </p>
             </div>
         </div>
 
         <div class="section">
             <h2>Summary</h2>
-            <p>
-                Results-driven and highly motivated IT professional with over 6 years of practical experience in providing
-                comprehensive IT support. Specializing in troubleshooting network technical problems, performing maintenance, 
-                and executing fixes for diverse hardware systems, while ensuring optimal system functionality. Proficient in 
-                implementing software updates to enhance operational efficiency.
-            </p>
+            <p>Results-driven and highly motivated IT professional with over 6 years of practical experience in providing comprehensive IT support. Specializing in troubleshooting network technical problems, performing maintenance, and executing fixes for diverse hardware systems, while ensuring optimal system functionality.</p>
+            <p>Proficient in implementing software updates to enhance operational efficiency. Known for being a hard-working and fast learner, adept at multitasking and consistently delivering high-quality work within established timelines. Seeking a challenging position in IT support to leverage my extensive experience, technical expertise, and dedication to contribute to the success of an organization.</p>
         </div>
 
         <div class="section">
             <h2>Experiences</h2>
-            <h3>Technical Support Specialist, Electronic Karan Co (Nov 2020 – Apr 2024)</h3>
+            <h3>Technical Support Specialist, Electronic Karan Co, Tehran	Nov 2020 – Apr 2024</h3>
             <ul>
-                <li>Created support service tickets and used web-based ticketing systems to track and deliver support services.</li>
-                <li>Provided comprehensive hardware and software support to resolve client issues.</li>
-                <li>Improved product recommendations, resulting in increased sales and customer satisfaction.</li>
-                <li>Troubleshot tier I technical issues for 25-30 customers daily, promptly diagnosing problems.</li>
+                <li>Create support service tickets and used web-based ticketing systems to track and deliver support services</li>
+                <li>Provide comprehensive hardware and software support to resolve client issues</li>
+                <li>Improve product recommendations, resulting in increased sales and customer satisfaction</li>
+                <li>Troubleshoot tier I technical issues for 25-30 customers daily, promptly diagnosing problems and identifying effective solutions</li>
+                <li>Troubleshoot and fix systems, ensuring optimal functionality and security</li>
+                <li>Collaborate with product development team to provide feedback and suggestions for product improvement based on customer feedback and common technical issues</li>
             </ul>
 
-            <h3>Computer Technical Specialist, Iran Nara Co (Mar 2017 - Oct 2020)</h3>
+            <h3>Computer Technical Specialist, Iran Nara Co, Tehran	Mar 2017 - Oct 2020</h3>
             <ul>
-                <li>Installed, serviced, and upgraded over 3000 Windows computers.</li>
-                <li>Resolved computer-related issues on ATMs, minimizing downtime and maximizing customer satisfaction.</li>
+                <li>Installed, serviced, and upgraded over 3000 Windows computers, ensuring optimal performance and functionality</li>
+                <li>Identified and resolved computer-related issues on ATMs, minimizing downtime and maximizing customer satisfaction</li>
+                <li>Organized and updated technical documents, ensuring accurate and up-to-date information for reference and troubleshooting</li>
+                <li>Assisted junior technicians in their preparation by providing guidance and support in identifying and troubleshooting computer issues</li>
+                <li>Developed new solution models for maintaining services infrastructure, improving efficiency and effectiveness in managing IT systems</li>
             </ul>
         </div>
 
         <div class="section">
             <h2>Education</h2>
             <ul>
-                <li>Monash University Malaysia, Master's degree (Business Information Systems) - Currently studying</li>
-                <li>Azad University, Bachelor of Engineering (Computer Software Engineering), Jul 2023</li>
+                <li>Monash University Malaysia, Master's degree (Business Information Systems) - currently studying</li>
+                <li>Azad University of Tehran, Bachelor of Engineering (Computer Software Engineering), Jul 2023</li>
+                <li>University of Guilan, Associate's degree (Computer Engineering), Jul 2014</li>
             </ul>
         </div>
 
@@ -124,7 +267,12 @@
             <h2>Certifications</h2>
             <ul>
                 <li>Google IT Support Professional Certificate, Coursera, Dec 2023</li>
+                <li>English for IT 1, Cisco, Dec 2023</li>
+                <li>Network Technician Career Path, Cisco, Nov 2023</li>
                 <li>Cisco CCNA v3, IT Masters (CSU), Jun 2023</li>
+                <li>PTE Academic Exam Overall Score 59, Pearson PTE, Apr 2023</li>
+                <li>Computer Network Fundamentals, IT Masters (CSU), Mar 2023</li>
+                <li>IT Career Fundamentals, IT Masters (CSU), Mar 2021</li>
             </ul>
         </div>
 
@@ -133,17 +281,39 @@
             <ul>
                 <li>Time Management</li>
                 <li>Technical Knowledge</li>
+                <li>Documentation and Reporting</li>
+                <li>Teamwork and Collaboration</li>
                 <li>Customer Service</li>
+                <li>Ticket Management</li>
                 <li>Adaptability</li>
+                <li>Troubleshooting</li>
+                <li>WordPress developing</li>
+                <li>Continuous Learning</li>
+                <li>Problem Solving</li>
             </ul>
         </div>
 
         <div class="section">
             <h2>Personal Projects</h2>
+            <h3>Tamirkarsalam	Jul 2018 - Feb 2023</h3>
+            <p>Online Repair and Service Request System</p>
             <ul>
-                <li><a href="https://tamirkarsalam.com/" target="_blank">Tamirkarsalam</a> - Online Repair and Service Request System</li>
-                <li><a href="https://itwiki.ir/" target="_blank">ITWiki</a> - Technology News and Tutorials</li>
+                <li>Developed and maintained the blog part of the platform site.</li>
+                <li>Created and optimized SEO content.</li>
+                <li>Performed regular updates and security maintenance.</li>
+                <li>Enhanced user engagement features.</li>
             </ul>
+            <h3>ITWiki	Oct 2014 - Jan 2019</h3>
+            <p>Technology News and Tutorials</p>
+            <ul>
+                <li>Built and maintained the WordPress site.</li>
+                <li>Managed and authored content.</li>
+                <li>Applied SEO best practices.</li>
+                <li>Conducted site audits and optimizations.</li>
+            </ul>
+            
+            <h2>Reference</h2>
+            <p>References available upon request</p>
         </div>
     </div>
 </body>
