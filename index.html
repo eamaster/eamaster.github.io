@@ -42,6 +42,103 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             border-radius: 10px;
         }
+
+        /* Login Form Styles */
+        .login-container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 40px;
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .login-form h1 {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .login-form p {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background: #2980b9;
+        }
+
+        .error-message {
+            color: var(--accent-color);
+            font-size: 14px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .resume-content {
+            display: none;
+        }
+
+        .logout-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background: #c0392b;
+        }
         
         h1 {
             color: var(--primary-color);
@@ -160,7 +257,7 @@
 
         /* Responsive styles */
         @media (max-width: 768px) {
-            .container {
+            .container, .login-container {
                 margin: 15px;
                 padding: 25px;
             }
@@ -181,6 +278,13 @@
             h2 {
                 font-size: 1.3em;
             }
+
+            .logout-btn {
+                top: 10px;
+                right: 10px;
+                padding: 6px 12px;
+                font-size: 12px;
+            }
         }
         
         @media print {
@@ -196,7 +300,7 @@
                 max-width: 100%;
             }
             
-            .no-print {
+            .no-print, .logout-btn {
                 display: none;
             }
             
@@ -208,112 +312,197 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="contact-info-box">
-            <div class="photo">
-                <img src="SeyedHesamodin_Mahdinejadsabet.jpg" alt="Photo of Seyedhesamodin Mahdinejadsabet">
-            </div>
-            <div class="contact-info">
-                <h1>Seyedhesamodin Mahdinejadsabet</h1>
-                <h2>IT SUPPORT SPECIALIST</h2>
-                <p>
-                    <i class="fas fa-map-marker-alt"></i> Malaysia, Subang Jaya<br>
-                    <i class="fas fa-phone"></i> +60 10-366 7865<br>
-                    <i class="fas fa-envelope"></i> <a href="mailto:Hesam.time@gmail.com">Hesam.time@gmail.com</a><br>
-                    <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/hesam-mahdinejad/" target="_blank">linkedin.com/in/hesam-mahdinejad</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Summary</h2>
-            <p>Results-driven and highly motivated IT professional with over 6 years of practical experience in providing comprehensive IT support. Specializing in troubleshooting network technical problems, performing maintenance, and executing fixes for diverse hardware systems, while ensuring optimal system functionality.</p>
-            <p>Proficient in implementing software updates to enhance operational efficiency. Known for being a hard-working and fast learner, adept at multitasking and consistently delivering high-quality work within established timelines. Seeking a challenging position in IT support to leverage my extensive experience, technical expertise, and dedication to contribute to the success of an organization.</p>
-        </div>
-
-        <div class="section">
-            <h2>Experiences</h2>
-            <h3>Technical Support Specialist, Electronic Karan Co, Tehran	Nov 2020 – Apr 2024</h3>
-            <ul>
-                <li>Create support service tickets and used web-based ticketing systems to track and deliver support services</li>
-                <li>Provide comprehensive hardware and software support to resolve client issues</li>
-                <li>Improve product recommendations, resulting in increased sales and customer satisfaction</li>
-                <li>Troubleshoot tier I technical issues for 25-30 customers daily, promptly diagnosing problems and identifying effective solutions</li>
-                <li>Troubleshoot and fix systems, ensuring optimal functionality and security</li>
-                <li>Collaborate with product development team to provide feedback and suggestions for product improvement based on customer feedback and common technical issues</li>
-            </ul>
-
-            <h3>Computer Technical Specialist, Iran Nara Co, Tehran	Mar 2017 - Oct 2020</h3>
-            <ul>
-                <li>Installed, serviced, and upgraded over 3000 Windows computers, ensuring optimal performance and functionality</li>
-                <li>Identified and resolved computer-related issues on ATMs, minimizing downtime and maximizing customer satisfaction</li>
-                <li>Organized and updated technical documents, ensuring accurate and up-to-date information for reference and troubleshooting</li>
-                <li>Assisted junior technicians in their preparation by providing guidance and support in identifying and troubleshooting computer issues</li>
-                <li>Developed new solution models for maintaining services infrastructure, improving efficiency and effectiveness in managing IT systems</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Education</h2>
-            <ul>
-                <li>Monash University Malaysia, Master's degree (Business Information Systems) - currently studying</li>
-                <li>Azad University of Tehran, Bachelor of Engineering (Computer Software Engineering), Jul 2023</li>
-                <li>University of Guilan, Associate's degree (Computer Engineering), Jul 2014</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Certifications</h2>
-            <ul>
-                <li>Google IT Support Professional Certificate, Coursera, Dec 2023</li>
-                <li>English for IT 1, Cisco, Dec 2023</li>
-                <li>Network Technician Career Path, Cisco, Nov 2023</li>
-                <li>Cisco CCNA v3, IT Masters (CSU), Jun 2023</li>
-                <li>PTE Academic Exam Overall Score 59, Pearson PTE, Apr 2023</li>
-                <li>Computer Network Fundamentals, IT Masters (CSU), Mar 2023</li>
-                <li>IT Career Fundamentals, IT Masters (CSU), Mar 2021</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Skills & Abilities</h2>
-            <ul>
-                <li>Time Management</li>
-                <li>Technical Knowledge</li>
-                <li>Documentation and Reporting</li>
-                <li>Teamwork and Collaboration</li>
-                <li>Customer Service</li>
-                <li>Ticket Management</li>
-                <li>Adaptability</li>
-                <li>Troubleshooting</li>
-                <li>WordPress developing</li>
-                <li>Continuous Learning</li>
-                <li>Problem Solving</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Personal Projects</h2>
-            <h3>Tamirkarsalam	Jul 2018 - Feb 2023</h3>
-            <p>Online Repair and Service Request System</p>
-            <ul>
-                <li>Developed and maintained the blog part of the platform site.</li>
-                <li>Created and optimized SEO content.</li>
-                <li>Performed regular updates and security maintenance.</li>
-                <li>Enhanced user engagement features.</li>
-            </ul>
-            <h3>ITWiki	Oct 2014 - Jan 2019</h3>
-            <p>Technology News and Tutorials</p>
-            <ul>
-                <li>Built and maintained the WordPress site.</li>
-                <li>Managed and authored content.</li>
-                <li>Applied SEO best practices.</li>
-                <li>Conducted site audits and optimizations.</li>
-            </ul>
-            
-            <h2>Reference</h2>
-            <p>References available upon request</p>
+    <!-- Login Form -->
+    <div id="loginForm" class="login-container">
+        <div class="login-form">
+            <h1><i class="fas fa-lock"></i> Access Required</h1>
+            <p>Please enter the password to view this resume</p>
+            <form onsubmit="checkPassword(event)">
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="login-btn">
+                    <i class="fas fa-sign-in-alt"></i> Access Resume
+                </button>
+                <div id="errorMessage" class="error-message">
+                    <i class="fas fa-exclamation-triangle"></i> Incorrect password. Please try again.
+                </div>
+            </form>
         </div>
     </div>
+
+    <!-- Logout Button -->
+    <button id="logoutBtn" class="logout-btn" onclick="logout()" style="display: none;">
+        <i class="fas fa-sign-out-alt"></i> Logout
+    </button>
+
+    <!-- Resume Content -->
+    <div id="resumeContent" class="resume-content">
+        <div class="container">
+            <div class="contact-info-box">
+                <div class="photo">
+                    <img src="SeyedHesamodin_Mahdinejadsabet.jpg" alt="Photo of Seyedhesamodin Mahdinejadsabet">
+                </div>
+                <div class="contact-info">
+                    <h1>Seyedhesamodin Mahdinejadsabet</h1>
+                    <h2>IT SUPPORT SPECIALIST</h2>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> Malaysia, Subang Jaya<br>
+                        <i class="fas fa-phone"></i> +60 10-366 7865<br>
+                        <i class="fas fa-envelope"></i> <a href="mailto:Hesam.time@gmail.com">Hesam.time@gmail.com</a><br>
+                        <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/hesam-mahdinejad/" target="_blank">linkedin.com/in/hesam-mahdinejad</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Summary</h2>
+                <p>Results-driven and highly motivated IT professional with over 6 years of practical experience in providing comprehensive IT support. Specializing in troubleshooting network technical problems, performing maintenance, and executing fixes for diverse hardware systems, while ensuring optimal system functionality.</p>
+                <p>Proficient in implementing software updates to enhance operational efficiency. Known for being a hard-working and fast learner, adept at multitasking and consistently delivering high-quality work within established timelines. Seeking a challenging position in IT support to leverage my extensive experience, technical expertise, and dedication to contribute to the success of an organization.</p>
+            </div>
+
+            <div class="section">
+                <h2>Experiences</h2>
+                <h3>Technical Support Specialist, Electronic Karan Co, Tehran	Nov 2020 – Apr 2024</h3>
+                <ul>
+                    <li>Create support service tickets and used web-based ticketing systems to track and deliver support services</li>
+                    <li>Provide comprehensive hardware and software support to resolve client issues</li>
+                    <li>Improve product recommendations, resulting in increased sales and customer satisfaction</li>
+                    <li>Troubleshoot tier I technical issues for 25-30 customers daily, promptly diagnosing problems and identifying effective solutions</li>
+                    <li>Troubleshoot and fix systems, ensuring optimal functionality and security</li>
+                    <li>Collaborate with product development team to provide feedback and suggestions for product improvement based on customer feedback and common technical issues</li>
+                </ul>
+
+                <h3>Computer Technical Specialist, Iran Nara Co, Tehran	Mar 2017 - Oct 2020</h3>
+                <ul>
+                    <li>Installed, serviced, and upgraded over 3000 Windows computers, ensuring optimal performance and functionality</li>
+                    <li>Identified and resolved computer-related issues on ATMs, minimizing downtime and maximizing customer satisfaction</li>
+                    <li>Organized and updated technical documents, ensuring accurate and up-to-date information for reference and troubleshooting</li>
+                    <li>Assisted junior technicians in their preparation by providing guidance and support in identifying and troubleshooting computer issues</li>
+                    <li>Developed new solution models for maintaining services infrastructure, improving efficiency and effectiveness in managing IT systems</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Education</h2>
+                <ul>
+                    <li>Monash University Malaysia, Master's degree (Business Information Systems) - currently studying</li>
+                    <li>Azad University of Tehran, Bachelor of Engineering (Computer Software Engineering), Jul 2023</li>
+                    <li>University of Guilan, Associate's degree (Computer Engineering), Jul 2014</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>Google IT Support Professional Certificate, Coursera, Dec 2023</li>
+                    <li>English for IT 1, Cisco, Dec 2023</li>
+                    <li>Network Technician Career Path, Cisco, Nov 2023</li>
+                    <li>Cisco CCNA v3, IT Masters (CSU), Jun 2023</li>
+                    <li>PTE Academic Exam Overall Score 59, Pearson PTE, Apr 2023</li>
+                    <li>Computer Network Fundamentals, IT Masters (CSU), Mar 2023</li>
+                    <li>IT Career Fundamentals, IT Masters (CSU), Mar 2021</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Skills & Abilities</h2>
+                <ul>
+                    <li>Time Management</li>
+                    <li>Technical Knowledge</li>
+                    <li>Documentation and Reporting</li>
+                    <li>Teamwork and Collaboration</li>
+                    <li>Customer Service</li>
+                    <li>Ticket Management</li>
+                    <li>Adaptability</li>
+                    <li>Troubleshooting</li>
+                    <li>WordPress developing</li>
+                    <li>Continuous Learning</li>
+                    <li>Problem Solving</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Personal Projects</h2>
+                <h3>Tamirkarsalam	Jul 2018 - Feb 2023</h3>
+                <p>Online Repair and Service Request System</p>
+                <ul>
+                    <li>Developed and maintained the blog part of the platform site.</li>
+                    <li>Created and optimized SEO content.</li>
+                    <li>Performed regular updates and security maintenance.</li>
+                    <li>Enhanced user engagement features.</li>
+                </ul>
+                <h3>ITWiki	Oct 2014 - Jan 2019</h3>
+                <p>Technology News and Tutorials</p>
+                <ul>
+                    <li>Built and maintained the WordPress site.</li>
+                    <li>Managed and authored content.</li>
+                    <li>Applied SEO best practices.</li>
+                    <li>Conducted site audits and optimizations.</li>
+                </ul>
+                
+                <h2>Reference</h2>
+                <p>References available upon request</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set your desired password here
+        const RESUME_PASSWORD = 'MySecurePassword123'; // Change this to your desired password
+        
+        // Check if user is already authenticated
+        window.onload = function() {
+            if (sessionStorage.getItem('resumeAuthenticated') === 'true') {
+                showResume();
+            }
+        };
+
+        function checkPassword(event) {
+            event.preventDefault();
+            
+            const enteredPassword = document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
+            
+            if (enteredPassword === RESUME_PASSWORD) {
+                // Store authentication in session storage
+                sessionStorage.setItem('resumeAuthenticated', 'true');
+                showResume();
+            } else {
+                // Show error message
+                errorMessage.style.display = 'block';
+                document.getElementById('password').value = '';
+                document.getElementById('password').focus();
+                
+                // Hide error message after 3 seconds
+                setTimeout(() => {
+                    errorMessage.style.display = 'none';
+                }, 3000);
+            }
+        }
+
+        function showResume() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('resumeContent').style.display = 'block';
+            document.getElementById('logoutBtn').style.display = 'block';
+        }
+
+        function logout() {
+            sessionStorage.removeItem('resumeAuthenticated');
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('resumeContent').style.display = 'none';
+            document.getElementById('logoutBtn').style.display = 'none';
+            document.getElementById('password').value = '';
+            document.getElementById('errorMessage').style.display = 'none';
+        }
+
+        // Optional: Allow Enter key to submit password
+        document.getElementById('password').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                checkPassword(event);
+            }
+        });
+    </script>
 </body>
 </html>
